@@ -1,0 +1,400 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* .nav ul {
+  display: flex;
+  list-style: none;
+} */
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav ul li {
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a:focus {
+  background-color: #007bff;
+  color: #fff;
+  outline: none;
+}
+
+.menu-toggle {
+  background: none;
+  display: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: url('images/final_profil.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1; 
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 2; 
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3;
+}
+
+/* À propos
+#apropos {
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#apropos img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} */
+
+/* Animation pour l'image */
+@keyframes float {
+  0% {
+    transform: translateY(0px); /* Position initiale */
+  }
+  50% {
+    transform: translateY(-15px); /* Monte de 15px */
+  }
+  100% {
+    transform: translateY(0px); /* Retour à la position initiale */
+  }
+}
+
+/* Styles pour la section À propos */
+#apropos {
+  padding: 80px 20px;
+  text-align: center; /* Centrer le titre */
+}
+
+#apropos h2 {
+  margin-bottom: 40px; /* Espace sous le titre */
+}
+
+/* Conteneur Flexbox principal pour l'image et le texte */
+.apropos-container {
+  display: flex;
+  flex-direction: row; /* Par défaut, en colonne pour les petits écrans */
+  align-items: center; /* Centrer les éléments verticalement */
+  justify-content: center;
+  gap: 40px; /* Espacement entre l'image et le texte */
+  max-width: 1000px; /* Largeur maximale pour le conteneur */
+  margin: 0 auto; /* Centrer le conteneur sur la page */
+  padding: 20px;
+}
+
+/* Styles pour l'image */
+.apropos-container img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  /* Ajouter l'animation ici */
+  animation: float 3s ease-in-out infinite; /* Nom, durée, type, répétition */
+}
+
+/* Effet de survol sur l'image (conserver celui-ci pour l'interactivité manuelle) */
+.apropos-container img:hover {
+  transform: scale(1.05); /* Zoom léger */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Ombre plus intense */
+  animation-play-state: paused; /* Met en pause l'animation de flottement au survol */
+}
+
+/* Styles pour le paragraphe de texte */
+.apropos-container p {
+  flex: 1; /* Permet au paragraphe de prendre l'espace disponible */
+  line-height: 1.8; /* Améliore la lisibilité */
+  font-size: 1.1em; /* Texte légèrement plus grand */
+  text-align: justify; /* Justifier le texte pour un meilleur alignement */
+  max-width: 600px; /* Limiter la largeur du texte pour la lisibilité */
+}
+
+
+
+/* Projets */
+#projets {
+  padding: 80px 20px;
+}
+
+#projets h2 {
+  margin-bottom: 40px; /* Espace sous le titre */
+}
+
+.projets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projet {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.projet:hover {
+  transform: translateY(-5px);
+}
+
+.projet img {
+  width: 100%;
+  display: block;
+}
+
+.projet h3 {
+  margin: 10px;
+}
+
+.projet p {
+  margin: 0 10px 10px;
+}
+
+.projet .btn {
+  margin: 10px;
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Contact */
+#contact {
+  padding: 80px 20px;
+}
+
+#contact h2 {
+  margin-bottom: 40px; /* Espace sous le titre */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.form-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  position: relative;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background-color: #fff;
+    gap: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  .nav ul.show {
+    left: 0;
+  }
+  .nav ul li {
+    margin: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  #apropos {
+    flex-direction: column;
+  }
+
+    .apropos-container {
+    flex-direction: row; /* Alignement côte à côte sur la même ligne */
+    text-align: left; /* Aligner le texte à gauche */
+    align-items: flex-start; /* Aligner les éléments en haut */
+  }
+
+  .apropos-container img {
+    margin-right: 40px; /* Espacement à droite de l'image */
+  }
+
+  .apropos-container p {
+    text-align: left; /* Assurer que le texte est aligné à gauche pour les grands écrans */
+  }
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+body.dark .theme-toggle i {
+  color: #ffffff;
+}
+
+body.dark .menu-toggle {
+    color: #ffffff;
+  }
+
+body.dark .header {
+  background-color: #1e1e1e;
+}
+
+body.dark .projet {
+  background-color: #1e1e1e;
+}
+
+body.dark .hero::after {
+  background-color: rgba(0,0,0,0.7);
+}
+
+body.dark form input, body.dark form textarea {
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+  border: 1px solid #444;
+}
+
+
+
+body.dark #backToTop {
+  background-color: #008cff;
+}
+/* body.dark #backToTop i{
+  background-color: #1504ff;
+} */
+
+
+
