@@ -22,7 +22,7 @@ L’objectif est de mettre en pratique les notions de **HTML5, CSS3 et JavaScrip
 - **HTML5** : structure sémantique.  
 - **CSS3** : design, Flexbox/Grid, responsive design, hover/focus, ombres, bordures arrondies.  
 - **JavaScript** : gestion des événements, manipulation du DOM, validation formulaire, interactions dynamiques. 
- 
+
 
 ## Arborescence du projet  
 
@@ -35,10 +35,7 @@ projet-web-html-css-js/
 
 ## Lancer le projet  
 
-1. Clonez le dépôt :  
-   ```bash
-   git clone https://karimtiendrebeogo.github.io/projet-web-html-css-js//projet-web-html-css-js.git
-   ```
+  Lien GitHub Pages : [Voir le projet en ligne](https://karimtiendrebeogo.github.io/projet-web-html-css-js)
 
 
 
