@@ -27,11 +27,12 @@ L’objectif est de mettre en pratique les notions de **HTML5, CSS3 et JavaScrip
 ## Arborescence du projet  
 
 projet-web-html-css-js/
+```
 ├── index.html
 ├── style.css
 ├── script.js
 └── images/
-
+```
 
 ## Lancer le projet  
 
