@@ -17,16 +17,39 @@ L’objectif est de mettre en pratique les notions de **HTML5, CSS3 et JavaScrip
   - Petit composant dynamique supplémentaire (*exemple : bouton retour en haut*).  
 - **Footer** avec informations personnelles et droits d’auteur.  
 
-## 🛠️ Technologies utilisées  
+## Technologies utilisées  
 
 - **HTML5** : structure sémantique.  
 - **CSS3** : design, Flexbox/Grid, responsive design, hover/focus, ombres, bordures arrondies.  
-- **JavaScript (vanilla)** : gestion des événements, manipulation du DOM, validation formulaire, interactions dynamiques.  
+- **JavaScript** : gestion des événements, manipulation du DOM, validation formulaire, interactions dynamiques. 
+ 
 
-## 📂 Arborescence du projet  
+## Arborescence du projet  
 
 projet-web-html-css-js/
 ├── index.html
 ├── style.css
 ├── script.js
 └── images/
+
+
+## Lancer le projet  
+
+1. Clonez le dépôt :  
+   ```bash
+   git clone https://karimtiendrebeogo.github.io/projet-web-html-css-js//projet-web-html-css-js.git
+   ```
+
+
+
+## Capture d'écran  
+
+1. Page mode clair :  
+![Aperçu de la page clair](./images/portfolio1.png)
+
+2. Page mode sombre :  
+![Aperçu de la page sombre](./images/portfolio_dark.png)
+
+
+## Auteur
+TIENDREBEOGO, Karim, Licence 3 en Modélisation Mathématiques.
